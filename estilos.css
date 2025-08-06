@@ -1,0 +1,13 @@
+header {
+  position: relative;
+  background: #0a88299d;
+  background-image: url(imagenes/foto3.jpg);
+  background-size: cover;
+  background-position: center;
+  padding: 300px;
+  color: rgb(0, 0, 0);
+  padding: 30px 20px;
+  text-align: center;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.2);
+  overflow: hidden; /* Para que la capa no se desborde */
+}

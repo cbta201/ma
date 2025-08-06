@@ -1,0 +1,157 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Servicio Social - CBTA #201</title>
+  <style>
+    @import url('https://fonts.googleapis.com/css2?family=Roboto+Slab:wght@700&display=swap');
+
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    body {
+      font-family: Arial, sans-serif;
+      background: #f9f4f1;
+      color: #5d4037;
+      min-height: 100vh;
+      position: relative;
+      overflow-x: hidden;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      padding: 40px 20px;
+      text-align: center;
+    }
+
+    .decor {
+      position: absolute;
+      border-radius: 50%;
+      opacity: 0.12;
+      z-index: -1;
+      animation: float 14s ease-in-out infinite;
+    }
+
+    .decor1 {
+      width: 160px;
+      height: 160px;
+      background: #a1887f;
+      top: 12%;
+      left: 14%;
+    }
+
+    .decor2 {
+      width: 130px;
+      height: 130px;
+      background: #bcaaa4;
+      bottom: 14%;
+      right: 14%;
+      animation-delay: 5s;
+    }
+
+    .decor3 {
+      width: 90px;
+      height: 90px;
+      background: #d7ccc8;
+      top: 52%;
+      left: 54%;
+      animation-delay: 9s;
+    }
+
+    @keyframes float {
+      0%, 100% { transform: translateY(0); }
+      50% { transform: translateY(-15px); }
+    }
+
+    .container {
+      background: white;
+      padding: 45px;
+      border-radius: 20px;
+      max-width: 1000px;
+      box-shadow: 0 0 28px rgba(0,0,0,0.12);
+    }
+
+    h1 {
+      font-family: 'Roboto Slab', serif;
+      font-size: 3rem;
+      margin-bottom: 25px;
+      color: #5d4037;
+    }
+
+    h2 {
+      font-size: 2rem;
+      margin: 32px 0 18px;
+      color: #6d4c41;
+    }
+
+    p {
+      font-size: 1.25rem;
+      line-height: 1.65;
+      margin-bottom: 22px;
+    }
+
+    ul {
+      list-style-type: disc;
+      padding-left: 40px;
+      text-align: left;
+      margin: 0 auto 35px auto;
+      max-width: 820px;
+    }
+
+    img {
+      max-width: 600px;
+      width: 100%;
+      border-radius: 12px;
+      margin-top: 35px;
+      box-shadow: 0 0 16px #5d4037aa;
+    }
+
+    @media (max-width: 768px) {
+      .container {
+        padding: 25px;
+      }
+
+      h1 {
+        font-size: 2rem;
+      }
+
+      h2 {
+        font-size: 1.5rem;
+      }
+    }
+  </style>
+</head>
+<body>
+
+  <!-- Decoraciones -->
+  <div class="decor decor1"></div>
+  <div class="decor decor2"></div>
+  <div class="decor decor3"></div>
+
+  <!-- Contenido -->
+  <div class="container">
+    <h1>Servicio Social</h1>
+
+    <p>El Servicio Social en el CBTA #201 es una oportunidad para que los estudiantes apliquen sus conocimientos en beneficio de la comunidad, desarrollando responsabilidad social y compromiso ético.</p>
+
+    <h2>Objetivos del Servicio Social</h2>
+    <ul>
+      <li>Promover la participación activa en proyectos comunitarios y ambientales.</li>
+      <li>Fortalecer habilidades prácticas y sociales a través de la experiencia directa.</li>
+      <li>Fomentar la conciencia sobre problemáticas locales y globales.</li>
+      <li>Contribuir al desarrollo sostenible y bienestar social en la región.</li>
+    </ul>
+
+    <h2>Beneficios para los Estudiantes</h2>
+    <p>El servicio social permite a los jóvenes adquirir competencias profesionales, mejorar su perfil curricular y establecer vínculos con instituciones públicas y privadas.</p>
+
+    <img src="imagenes/agro1.jpg">
+
+  </div>
+
+</body>
+</html>
+

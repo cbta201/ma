@@ -1,0 +1,156 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Área Físico-Matemático - CBTA #201</title>
+  <style>
+    @import url('https://fonts.googleapis.com/css2?family=Roboto+Slab:wght@700&display=swap');
+
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    body {
+      font-family: Arial, sans-serif;
+      background: #f0f4f8;
+      color: #0a3d62;
+      min-height: 100vh;
+      position: relative;
+      overflow-x: hidden;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      padding: 40px 20px;
+      text-align: center;
+    }
+
+    .decor {
+      position: absolute;
+      border-radius: 50%;
+      opacity: 0.12;
+      z-index: -1;
+      animation: float 12s ease-in-out infinite;
+    }
+
+    .decor1 {
+      width: 150px;
+      height: 150px;
+      background: #2471a3;
+      top: 15%;
+      left: 12%;
+    }
+
+    .decor2 {
+      width: 130px;
+      height: 130px;
+      background: #3498db;
+      bottom: 12%;
+      right: 15%;
+      animation-delay: 4s;
+    }
+
+    .decor3 {
+      width: 90px;
+      height: 90px;
+      background: #85c1e9;
+      top: 55%;
+      left: 53%;
+      animation-delay: 7s;
+    }
+
+    @keyframes float {
+      0%, 100% { transform: translateY(0); }
+      50% { transform: translateY(-18px); }
+    }
+
+    .container {
+      background: white;
+      padding: 45px;
+      border-radius: 20px;
+      max-width: 1000px;
+      box-shadow: 0 0 28px rgba(0,0,0,0.12);
+    }
+
+    h1 {
+      font-family: 'Roboto Slab', serif;
+      font-size: 3rem;
+      margin-bottom: 25px;
+      color: #0a3d62;
+    }
+
+    h2 {
+      font-size: 2rem;
+      margin: 32px 0 18px;
+      color: #145a86;
+    }
+
+    p {
+      font-size: 1.25rem;
+      line-height: 1.65;
+      margin-bottom: 22px;
+    }
+
+    ul {
+      list-style-type: disc;
+      padding-left: 40px;
+      text-align: left;
+      margin: 0 auto 35px auto;
+      max-width: 820px;
+    }
+
+    img {
+      max-width: 600px;
+      width: 100%;
+      border-radius: 12px;
+      margin-top: 35px;
+      box-shadow: 0 0 16px #0a3d62aa;
+    }
+
+    @media (max-width: 768px) {
+      .container {
+        padding: 25px;
+      }
+
+      h1 {
+        font-size: 2rem;
+      }
+
+      h2 {
+        font-size: 1.5rem;
+      }
+    }
+  </style>
+</head>
+<body>
+
+  <!-- Decoraciones -->
+  <div class="decor decor1"></div>
+  <div class="decor decor2"></div>
+  <div class="decor decor3"></div>
+
+  <!-- Contenido -->
+  <div class="container">
+    <h1>Área Físico-Matemático</h1>
+
+    <p>En el CBTA #201, el área Físico-Matemático prepara a los estudiantes con una sólida base en ciencias físicas y matemáticas, fortaleciendo su capacidad analítica para resolver problemas técnicos y científicos.</p>
+
+    <h2>Objetivos del Área</h2>
+    <ul>
+      <li>Desarrollar habilidades en el análisis matemático y aplicación de principios físicos.</li>
+      <li>Capacitar en el uso de herramientas tecnológicas para modelado y simulación.</li>
+      <li>Fomentar el pensamiento lógico, crítico y científico.</li>
+      <li>Preparar para la aplicación de matemáticas y física en entornos técnicos e industriales.</li>
+    </ul>
+
+    <h2>Oportunidades Laborales</h2>
+    <p>Los egresados pueden integrarse en áreas de ingeniería, investigación tecnológica, docencia, y empresas que requieran competencias matemáticas y físicas para la solución de problemas complejos.</p>
+
+    <img src="imagenes/descargaff.jpeg">
+
+  </div>
+
+</body>
+</html>

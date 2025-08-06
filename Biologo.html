@@ -1,0 +1,156 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Área Químico-Biólogo - CBTA #201</title>
+  <style>
+    @import url('https://fonts.googleapis.com/css2?family=Roboto+Slab:wght@700&display=swap');
+
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    body {
+      font-family: Arial, sans-serif;
+      background: #e8f5e9;
+      color: #1b4d3e;
+      min-height: 100vh;
+      position: relative;
+      overflow-x: hidden;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      padding: 40px 20px;
+      text-align: center;
+    }
+
+    .decor {
+      position: absolute;
+      border-radius: 50%;
+      opacity: 0.12;
+      z-index: -1;
+      animation: float 14s ease-in-out infinite;
+    }
+
+    .decor1 {
+      width: 160px;
+      height: 160px;
+      background: #2e7d32;
+      top: 12%;
+      left: 8%;
+    }
+
+    .decor2 {
+      width: 130px;
+      height: 130px;
+      background: #66bb6a;
+      bottom: 12%;
+      right: 12%;
+      animation-delay: 5s;
+    }
+
+    .decor3 {
+      width: 100px;
+      height: 100px;
+      background: #a5d6a7;
+      top: 52%;
+      left: 55%;
+      animation-delay: 8s;
+    }
+
+    @keyframes float {
+      0%, 100% { transform: translateY(0); }
+      50% { transform: translateY(-18px); }
+    }
+
+    .container {
+      background: white;
+      padding: 45px;
+      border-radius: 20px;
+      max-width: 1000px;
+      box-shadow: 0 0 28px rgba(0,0,0,0.12);
+    }
+
+    h1 {
+      font-family: 'Roboto Slab', serif;
+      font-size: 3rem;
+      margin-bottom: 25px;
+      color: #1b4d3e;
+    }
+
+    h2 {
+      font-size: 2rem;
+      margin: 32px 0 18px;
+      color: #145a32;
+    }
+
+    p {
+      font-size: 1.25rem;
+      line-height: 1.65;
+      margin-bottom: 22px;
+    }
+
+    ul {
+      list-style-type: disc;
+      padding-left: 40px;
+      text-align: left;
+      margin: 0 auto 35px auto;
+      max-width: 820px;
+    }
+
+    img {
+      max-width: 600px;
+      width: 100%;
+      border-radius: 12px;
+      margin-top: 35px;
+      box-shadow: 0 0 16px #145a32aa;
+    }
+
+    @media (max-width: 768px) {
+      .container {
+        padding: 25px;
+      }
+
+      h1 {
+        font-size: 2rem;
+      }
+
+      h2 {
+        font-size: 1.5rem;
+      }
+    }
+  </style>
+</head>
+<body>
+
+  <!-- Decoraciones -->
+  <div class="decor decor1"></div>
+  <div class="decor decor2"></div>
+  <div class="decor decor3"></div>
+
+  <!-- Contenido -->
+  <div class="container">
+    <h1>Área Químico-Biólogo</h1>
+
+    <p>El CBTA #201 forma profesionales en el área Químico-Biólogo con conocimientos sólidos en ciencias naturales, enfocándose en procesos biológicos, químicos y ambientales para contribuir al desarrollo sostenible y la innovación tecnológica.</p>
+
+    <h2>Objetivos del Área</h2>
+    <ul>
+      <li>Desarrollar competencias en análisis químico y biológico.</li>
+      <li>Capacitar en el manejo de laboratorio y técnicas científicas.</li>
+      <li>Promover la investigación aplicada y el cuidado ambiental.</li>
+      <li>Fomentar el pensamiento crítico y la solución de problemas científicos.</li>
+    </ul>
+
+    <h2>Perspectivas Laborales</h2>
+    <p>Los egresados pueden trabajar en laboratorios, empresas del sector ambiental, industrias químicas, instituciones educativas y proyectos de investigación, contribuyendo al desarrollo científico y tecnológico.</p>
+
+    <img src="imagenes/biologo.jpeg">
+
+  </div>
+
+</body>
+</html>

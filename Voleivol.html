@@ -1,0 +1,157 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Club de Voleibol - CBTA #201</title>
+  <style>
+    @import url('https://fonts.googleapis.com/css2?family=Roboto+Slab:wght@700&display=swap');
+
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    body {
+      font-family: Arial, sans-serif;
+      background: #fff3e0;
+      color: #bf360c;
+      min-height: 100vh;
+      position: relative;
+      overflow-x: hidden;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      padding: 40px 20px;
+      text-align: center;
+    }
+
+    .decor {
+      position: absolute;
+      border-radius: 50%;
+      opacity: 0.08;
+      z-index: -1;
+      animation: float 10s ease-in-out infinite;
+    }
+
+    .decor1 {
+      width: 150px;
+      height: 150px;
+      background: #ff7043;
+      top: 10%;
+      left: 10%;
+    }
+
+    .decor2 {
+      width: 100px;
+      height: 100px;
+      background: #ffa270;
+      bottom: 10%;
+      right: 15%;
+      animation-delay: 2s;
+    }
+
+    .decor3 {
+      width: 90px;
+      height: 90px;
+      background: #ffab91;
+      top: 50%;
+      left: 55%;
+      animation-delay: 4s;
+    }
+
+    @keyframes float {
+      0%, 100% { transform: translateY(0); }
+      50% { transform: translateY(-20px); }
+    }
+
+    .container {
+      background: white;
+      padding: 40px;
+      border-radius: 20px;
+      max-width: 1000px;
+      box-shadow: 0 0 20px rgba(0,0,0,0.1);
+    }
+
+    h1 {
+      font-family: 'Roboto Slab', serif;
+      font-size: 3rem;
+      margin-bottom: 20px;
+      color: #e64a19;
+    }
+
+    h2 {
+      font-size: 2rem;
+      margin: 30px 0 15px;
+      color: #d84315;
+    }
+
+    p {
+      font-size: 1.2rem;
+      line-height: 1.6;
+      margin-bottom: 20px;
+    }
+
+    ul {
+      list-style-type: disc;
+      padding-left: 40px;
+      text-align: left;
+      margin: 0 auto 30px auto;
+      max-width: 800px;
+    }
+
+    img {
+      max-width: 600px;
+      width: 100%;
+      border-radius: 10px;
+      margin-top: 30px;
+      box-shadow: 0 0 10px #e6510099;
+    }
+
+    @media (max-width: 768px) {
+      .container {
+        padding: 20px;
+      }
+
+      h1 {
+        font-size: 2rem;
+      }
+
+      h2 {
+        font-size: 1.5rem;
+      }
+    }
+  </style>
+</head>
+<body>
+
+  <!-- Decoraciones -->
+  <div class="decor decor1"></div>
+  <div class="decor decor2"></div>
+  <div class="decor decor3"></div>
+
+  <!-- Contenido -->
+  <div class="container">
+    <h1>Club de Voleibol</h1>
+
+    <p>El Club de Voleibol del CBTA #201 es un espacio para fortalecer la condición física, el trabajo en equipo y la disciplina a través de la práctica deportiva. Este club promueve la participación activa en torneos escolares y regionales.</p>
+
+    <h2>Objetivos del Club</h2>
+    <ul>
+      <li>Fomentar la actividad física y hábitos de vida saludable.</li>
+      <li>Desarrollar habilidades técnicas y tácticas del voleibol.</li>
+      <li>Fortalecer la autoestima, la responsabilidad y el compañerismo.</li>
+      <li>Representar dignamente al CBTA #201 en eventos deportivos.</li>
+    </ul>
+
+    <h2>Participación y Eventos</h2>
+    <p>Los alumnos del club participan en entrenamientos regulares, encuentros amistosos, torneos locales y competencias interescolares, promoviendo valores deportivos y una actitud positiva dentro y fuera de la cancha.</p>
+
+    <img src="imagenes/voley.jpg">
+
+  </div>
+
+</body>
+</html>
+

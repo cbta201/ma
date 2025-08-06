@@ -1,0 +1,157 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Club de Basquetbol - CBTA #201</title>
+  <style>
+    @import url('https://fonts.googleapis.com/css2?family=Roboto+Slab:wght@700&display=swap');
+
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    body {
+      font-family: Arial, sans-serif;
+      background: #f3e5f5;
+      color: #4a148c;
+      min-height: 100vh;
+      position: relative;
+      overflow-x: hidden;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      padding: 40px 20px;
+      text-align: center;
+    }
+
+    .decor {
+      position: absolute;
+      border-radius: 50%;
+      opacity: 0.08;
+      z-index: -1;
+      animation: float 10s ease-in-out infinite;
+    }
+
+    .decor1 {
+      width: 150px;
+      height: 150px;
+      background: #7b1fa2;
+      top: 10%;
+      left: 10%;
+    }
+
+    .decor2 {
+      width: 100px;
+      height: 100px;
+      background: #ba68c8;
+      bottom: 10%;
+      right: 15%;
+      animation-delay: 2s;
+    }
+
+    .decor3 {
+      width: 90px;
+      height: 90px;
+      background: #e1bee7;
+      top: 50%;
+      left: 55%;
+      animation-delay: 4s;
+    }
+
+    @keyframes float {
+      0%, 100% { transform: translateY(0); }
+      50% { transform: translateY(-20px); }
+    }
+
+    .container {
+      background: white;
+      padding: 40px;
+      border-radius: 20px;
+      max-width: 1000px;
+      box-shadow: 0 0 20px rgba(0,0,0,0.1);
+    }
+
+    h1 {
+      font-family: 'Roboto Slab', serif;
+      font-size: 3rem;
+      margin-bottom: 20px;
+      color: #6a1b9a;
+    }
+
+    h2 {
+      font-size: 2rem;
+      margin: 30px 0 15px;
+      color: #4a148c;
+    }
+
+    p {
+      font-size: 1.2rem;
+      line-height: 1.6;
+      margin-bottom: 20px;
+    }
+
+    ul {
+      list-style-type: disc;
+      padding-left: 40px;
+      text-align: left;
+      margin: 0 auto 30px auto;
+      max-width: 800px;
+    }
+
+    img {
+      max-width: 600px;
+      width: 100%;
+      border-radius: 10px;
+      margin-top: 30px;
+      box-shadow: 0 0 10px #4a148c99;
+    }
+
+    @media (max-width: 768px) {
+      .container {
+        padding: 20px;
+      }
+
+      h1 {
+        font-size: 2rem;
+      }
+
+      h2 {
+        font-size: 1.5rem;
+      }
+    }
+  </style>
+</head>
+<body>
+
+  <!-- Decoraciones -->
+  <div class="decor decor1"></div>
+  <div class="decor decor2"></div>
+  <div class="decor decor3"></div>
+
+  <!-- Contenido -->
+  <div class="container">
+    <h1>Club de Basquetbol</h1>
+
+    <p>El Club de Basquetbol del CBTA #201 promueve la sana competencia, la disciplina y el espíritu de superación entre los estudiantes, brindando un espacio deportivo donde desarrollan sus habilidades físicas y mentales.</p>
+
+    <h2>Objetivos del Club</h2>
+    <ul>
+      <li>Impulsar el trabajo en equipo y el respeto entre compañeros.</li>
+      <li>Mejorar la condición física y coordinación de los participantes.</li>
+      <li>Fomentar la práctica del deporte como hábito saludable.</li>
+      <li>Participar activamente en torneos interescolares y comunitarios.</li>
+    </ul>
+
+    <h2>Entrenamiento y Actividades</h2>
+    <p>Los entrenamientos se realizan en horarios vespertinos. Además de la práctica deportiva, se imparten charlas sobre liderazgo, motivación y disciplina. El club es reconocido por su participación destacada en competencias regionales.</p>
+
+    <img src="imagenes/basquetbol.png">
+
+  </div>
+
+</body>
+</html>
+

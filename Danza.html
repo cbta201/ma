@@ -1,0 +1,158 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Club de Danza - CBTA #201</title>
+  <style>
+    @import url('https://fonts.googleapis.com/css2?family=Roboto+Slab:wght@700&display=swap');
+
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    body {
+      font-family: Arial, sans-serif;
+      background: #fff8e1;
+      color: #bf360c;
+      min-height: 100vh;
+      position: relative;
+      overflow-x: hidden;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      padding: 40px 20px;
+      text-align: center;
+    }
+
+    .decor {
+      position: absolute;
+      border-radius: 50%;
+      opacity: 0.08;
+      z-index: -1;
+      animation: float 10s ease-in-out infinite;
+    }
+
+    .decor1 {
+      width: 130px;
+      height: 130px;
+      background: #ff6f00;
+      top: 15%;
+      left: 12%;
+    }
+
+    .decor2 {
+      width: 100px;
+      height: 100px;
+      background: #ffa726;
+      bottom: 15%;
+      right: 15%;
+      animation-delay: 2s;
+    }
+
+    .decor3 {
+      width: 90px;
+      height: 90px;
+      background: #ffe0b2;
+      top: 50%;
+      left: 55%;
+      animation-delay: 5s;
+    }
+
+    @keyframes float {
+      0%, 100% { transform: translateY(0); }
+      50% { transform: translateY(-20px); }
+    }
+
+    .container {
+      background: white;
+      padding: 40px;
+      border-radius: 20px;
+      max-width: 1000px;
+      box-shadow: 0 0 20px rgba(0,0,0,0.1);
+    }
+
+    h1 {
+      font-family: 'Roboto Slab', serif;
+      font-size: 3rem;
+      margin-bottom: 20px;
+      color: #e65100;
+    }
+
+    h2 {
+      font-size: 2rem;
+      margin: 30px 0 15px;
+      color: #bf360c;
+    }
+
+    p {
+      font-size: 1.2rem;
+      line-height: 1.6;
+      margin-bottom: 20px;
+    }
+
+    ul {
+      list-style-type: disc;
+      padding-left: 40px;
+      text-align: left;
+      margin: 0 auto 30px auto;
+      max-width: 800px;
+    }
+
+    img {
+      max-width: 600px;
+      width: 100%;
+      border-radius: 10px;
+      margin-top: 30px;
+      box-shadow: 0 0 10px #e6510099;
+    }
+
+    @media (max-width: 768px) {
+      .container {
+        padding: 20px;
+      }
+
+      h1 {
+        font-size: 2rem;
+      }
+
+      h2 {
+        font-size: 1.5rem;
+      }
+    }
+  </style>
+</head>
+<body>
+
+  <!-- Decoraciones -->
+  <div class="decor decor1"></div>
+  <div class="decor decor2"></div>
+  <div class="decor decor3"></div>
+
+  <!-- Contenido -->
+  <div class="container">
+    <h1>Club de Danza</h1>
+
+    <p>El Club de Danza del CBTA #201 celebra la riqueza cultural a través de expresiones artísticas, promoviendo el orgullo por nuestras raíces y el desarrollo físico, emocional y creativo de nuestros estudiantes.</p>
+
+    <h2>Objetivos del Club</h2>
+    <ul>
+      <li>Fomentar la identidad cultural mediante danzas tradicionales mexicanas.</li>
+      <li>Estimular la expresión corporal, coordinación y ritmo.</li>
+      <li>Impulsar la autoestima, trabajo en equipo y creatividad.</li>
+      <li>Representar al plantel en eventos cívicos y culturales.</li>
+    </ul>
+
+    <h2>Actividades del Club</h2>
+    <p>Los integrantes reciben clases prácticas semanales, además de participar en presentaciones durante eventos escolares y regionales. Se trabajan coreografías de sones, jarabes, danzas mestizas y folklóricas.</p>
+
+    <img src="imagenes/danza.jpg">
+
+  </div>
+
+</body>
+</html>
+
+

@@ -1,0 +1,489 @@
+ <!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Centro de Bachillerato Tecnológico Agropecuario #201</title>
+  <link rel="icon" href="imagenes/1.png" type="image/x-icon" />
+  <style>
+    @import url('https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap');
+
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    body {
+      font-family: 'Roboto', sans-serif;
+      background: linear-gradient(to right, #d0e7f9, #e1f0fb);
+      color: #333;
+      display: flex;
+      flex-direction: column;
+      min-height: 100vh;
+      position: relative;
+      overflow-x: hidden;
+    }
+
+    header {
+      position: relative;
+      background: rgba(3, 59, 119, 0.6);
+      background-image: url(imagenes/foto3.jpg);
+      background-size: cover;
+      background-position: center;
+      padding: 200px 20px 30px 20px;
+      color: rgb(220, 220, 220);
+      text-align: center;
+      box-shadow: 0 4px 6px rgba(0, 0, 0, 0.2);
+      overflow: hidden;
+      transition: all 0.3s ease;
+      z-index: 2;
+    }
+
+    header::before {
+      content: "";
+      position: absolute;
+      top: 0; left: 0;
+      width: 100%; height: 100%;
+      background-color: rgba(0, 0, 0, 0.6);
+      z-index: 1;
+    }
+
+    header > * {
+      position: relative;
+      z-index: 2;
+    }
+
+    header h1 {
+      font-size: 3.5rem;
+      font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+    }
+
+    header p {
+      font-family: 'Times New Roman', serif;
+      font-size: 2rem;
+    }
+
+    nav {
+      background-color: #035b77;
+      box-shadow: 0 2px 6px rgba(0,0,0,0.1);
+      z-index: 3;
+      position: sticky;
+      top: 0;
+    }
+
+    nav ul {
+      list-style: none;
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+    }
+
+    nav li {
+      position: relative;
+    }
+
+    nav li a, .dropdown-btn {
+      display: block;
+      color: white;
+      padding: 15px 20px;
+      text-decoration: none;
+      font-weight: bold;
+      transition: background 0.3s ease;
+      cursor: pointer;
+    }
+
+    nav li a:hover, .dropdown:hover .dropdown-btn {
+      background-color: #3b82c4;
+      border-radius: 8px;
+    }
+
+    .dropdown-content {
+      display: none;
+      position: absolute;
+      top: 50px;
+      left: 0;
+      background-color: #ffffff;
+      min-width: 200px;
+      border-radius: 8px;
+      box-shadow: 0 8px 16px rgba(0,0,0,0.2);
+      z-index: 10;
+    }
+
+    .dropdown-content a {
+      color: #333;
+      padding: 12px 16px;
+      text-decoration: none;
+      display: block;
+      transition: background 0.3s ease;
+    }
+
+    .dropdown-content a:hover {
+      background-color: #dbe9fb;
+      border-radius: 4px;
+    }
+
+    .dropdown:hover .dropdown-content {
+      display: block;
+    }
+
+    
+    .contenido {
+      max-width: 1300px;
+      width: 90vw;
+      margin: 20px auto 40px auto;
+      padding: 20px;
+      box-sizing: border-box;
+      min-height: 500px;
+      position: relative;
+      z-index: 2;
+      text-align: center;
+    }
+
+    
+    .contenido.inicio {
+      background: rgba(255, 255, 255, 0.9);
+      border-radius: 20px;
+      box-shadow: 0 8px 24px rgba(3,59,119,0.15);
+      padding: 40px 30px;
+    }
+
+    .contenido.inicio h2 {
+      color: #035b77;
+      font-size: 2.8rem;
+      margin-bottom: 25px;
+      font-weight: 700;
+    }
+
+    .contenido.inicio p {
+      font-size: 1.3rem;
+      line-height: 1.8;
+      max-width: 900px;
+      margin: 0 auto 35px auto;
+      color: #064663;
+    }
+
+    .contenido.inicio img {
+      max-width: 450px;
+      width: 100%;
+      border-radius: 15px;
+      box-shadow: 0 8px 20px rgba(3, 59, 119, 0.2);
+      margin-top: 20px;
+      transition: transform 0.3s ease;
+    }
+
+    .contenido.inicio img:hover {
+      transform: scale(1.05);
+    }
+
+    
+    .bubbles {
+      position: fixed;
+      top: 0; left: 0;
+      width: 100%;
+      height: 100%;
+      pointer-events: none;
+      overflow: hidden;
+      z-index: 1;
+    }
+
+    .bubble {
+      position: absolute;
+      bottom: -100px;
+      background-color: rgba(3, 91, 119, 0.15);
+      border-radius: 50%;
+      animation: rise 15s linear infinite;
+      opacity: 0.6;
+    }
+
+    .bubble:nth-child(1) {
+      width: 60px;
+      height: 60px;
+      left: 10%;
+      animation-duration: 14s;
+      animation-delay: 0s;
+    }
+
+    .bubble:nth-child(2) {
+      width: 90px;
+      height: 90px;
+      left: 25%;
+      animation-duration: 18s;
+      animation-delay: 3s;
+    }
+
+    .bubble:nth-child(3) {
+      width: 40px;
+      height: 40px;
+      left: 40%;
+      animation-duration: 12s;
+      animation-delay: 5s;
+    }
+
+    .bubble:nth-child(4) {
+      width: 80px;
+      height: 80px;
+      left: 60%;
+      animation-duration: 20s;
+      animation-delay: 2s;
+    }
+
+    .bubble:nth-child(5) {
+      width: 50px;
+      height: 50px;
+      left: 75%;
+      animation-duration: 16s;
+      animation-delay: 7s;
+    }
+
+    .bubble:nth-child(6) {
+      width: 70px;
+      height: 70px;
+      left: 85%;
+      animation-duration: 19s;
+      animation-delay: 4s;
+    }
+
+    @keyframes rise {
+      0% {
+        transform: translateY(0) scale(1);
+        opacity: 0.6;
+      }
+      100% {
+        transform: translateY(-110vh) scale(1.2);
+        opacity: 0;
+      }
+    }
+
+    /* Pie de página mejorado */
+    footer {
+      background: linear-gradient(90deg, #035b77, #0b7dbd);
+      color: #d7e9f7;
+      padding: 30px 20px;
+      font-size: 1rem;
+      box-shadow: 0 -3px 10px rgba(3,91,119,0.6);
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: space-between;
+      align-items: center;
+      gap: 15px;
+      font-weight: 500;
+      position: relative;
+      z-index: 2;
+      border-top-left-radius: 15px;
+      border-top-right-radius: 15px;
+    }
+
+    footer p {
+      margin: 5px 0;
+      flex: 1 1 300px;
+    }
+
+    footer a {
+      color: #aaddff;
+      text-decoration: none;
+      transition: color 0.3s ease;
+    }
+
+    footer a:hover {
+      color: #ffffff;
+      text-decoration: underline;
+    }
+
+    .social-icons {
+      display: flex;
+      gap: 20px;
+      align-items: center;
+      font-size: 1.3rem;
+      flex: 0 1 auto;
+    }
+
+    .social-icons a {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      width: 36px;
+      height: 36px;
+      background: rgba(255,255,255,0.2);
+      border-radius: 50%;
+      transition: background-color 0.3s ease, transform 0.3s ease;
+    }
+
+    .social-icons a:hover {
+      background: #ffffff;
+      color: #035b77;
+      transform: scale(1.1);
+    }
+
+    /* Íconos SVG */
+    .icon-mail, .icon-facebook {
+      fill: #d7e9f7;
+      width: 20px;
+      height: 20px;
+      transition: fill 0.3s ease;
+    }
+
+    .social-icons a:hover .icon-mail,
+    .social-icons a:hover .icon-facebook {
+      fill: #035b77;
+    }
+
+    @media (max-width: 768px) {
+      nav ul {
+        flex-direction: column;
+        align-items: center;
+      }
+
+      .dropdown-content {
+        position: static;
+        width: 100%;
+        box-shadow: none;
+        background-color: #f1f8e9;
+      }
+
+      nav li {
+        width: 100%;
+      }
+
+      .contenido {
+        max-width: 95%;
+        width: 95vw;
+        padding: 20px 10px;
+      }
+
+      .contenido img {
+        max-width: 100%;
+        margin-top: 10px;
+      }
+
+      .contenido.inicio h2 {
+        font-size: 2rem;
+      }
+
+      .contenido.inicio p {
+        font-size: 1.1rem;
+      }
+    }
+  </style>
+</head>
+<body>
+
+<header>
+  <h1>CBTA No. 201 – Excelencia en Formación Técnica</h1>
+  <p>Comprometidos con el Desarrollo Regional</p>
+</header>
+
+<nav>
+  <ul>
+    <li><a href="#" id="inicioBtn">Inicio</a></li>
+    <li class="dropdown">
+      <a href="#" class="dropdown-btn">Carreras Técnicas</a>
+      <div class="dropdown-content">
+        <a href="Ofimatica.html">Ofimática</a>
+        <a href="Agropecuario.html">Agropecuario</a>
+      </div>
+    </li>
+    <li class="dropdown">
+      <a href="#" class="dropdown-btn">Clubes</a>
+      <div class="dropdown-content">
+        <a href="Voleivol.html">Voleibol</a>
+        <a href="Basquetbol.html">Básquet</a>
+        <a href="Danza.html">Danza</a>
+        <a href="Ajedrez.html">Ajedrez</a>
+      </div>
+    </li>
+    <li class="dropdown">
+      <a href="#" class="dropdown-btn">Área Propedéutica</a>
+      <div class="dropdown-content">
+        <a href="Ecomomico.html">Económico-Administrativo</a>
+        <a href="Biologo.html">Químico-Biólogo</a>
+        <a href="Mattematico.html">Físico-Matemático</a>
+      </div>
+    </li>
+    <li class="dropdown">
+      <a href="#" class="dropdown-btn">Alumnos</a>
+      <div class="dropdown-content">
+        <a href="Servicio.html">Servicio Social</a>
+        <a href="Titulacion.html">Titulación</a>
+      </div>
+    </li>
+  </ul>
+</nav>
+<div class="bubbles" aria-hidden="true">
+  <div class="bubble"></div>
+  <div class="bubble"></div>
+  <div class="bubble"></div>
+  <div class="bubble"></div>
+  <div class="bubble"></div>
+  <div class="bubble"></div>
+</div>
+
+
+<div class="contenido inicio">
+  
+    <h2>Bienvenidos al Centro de Bachillerato Tecnológico Agropecuario No. 201</h2>
+    <p>En CBTA 201 promovemos una educación técnica de calidad, orientada al desarrollo sostenible y al bienestar comunitario, formando estudiantes con competencias profesionales, éticas y sociales para enfrentar los retos del futuro.</p>
+    <img src="imagenes/escolta1.jpg" alt="CBTa" >
+  
+</div>
+
+<!-- Contenedor para cargar otras páginas -->
+<div class="contenido" id="contenidoInfo" style="display:none;">
+  <!-- iframe cargará aquí -->
+</div>
+
+<footer>
+  <p>Centro de Bachillerato Tecnológico Agropecuario No. 201</p>
+  <p>Camino Real Chinigue s/n, Sección Segunda, Villa Sola de Vega, Oaxaca, C.P. 71413</p>
+  <div class="social-icons">
+    <a href="mailto:oax.cbta201.direccion@dgetaycm.sems.gob.mx" title="Enviar correo">
+      <svg class="icon-mail" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" >
+        <path d="M20 4H4c-1.1 0-2 .9-2 2v12c0 1.1.9 2 2 2h16c1.1 0 2-.9 2-2V6c0-1.1-.9-2-2-2zM4 8l8 5 8-5v-2l-8 5-8-5v2z"/>
+      </svg>
+    </a>
+    <a href="https://www.facebook.com/cbta201" target="_blank" title="Visitar Facebook">
+      <svg class="icon-facebook" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" >
+        <path d="M22 12c0-5.52-4.48-10-10-10S2 6.48 2 12c0 5 3.66 9.13 8.44 9.88v-6.99H7.9v-2.89h2.54V9.41c0-2.5 1.49-3.89 3.77-3.89 1.09 0 2.23.2 2.23.2v2.46h-1.25c-1.23 0-1.61.76-1.61 1.54v1.85h2.74l-.44 2.89h-2.3v6.99C18.34 21.13 22 17 22 12z"/>
+      </svg>
+    </a>
+  </div>
+</footer>
+
+<script>
+  function mostrarInicio(mostrar) {
+    const header = document.querySelector('header');
+    const inicio = document.querySelector('.inicio');
+    const contenidoInfo = document.getElementById('contenidoInfo');
+    if (mostrar) {
+      header.style.display = 'block';
+      inicio.style.display = 'block';
+      contenidoInfo.style.display = 'none';
+      contenidoInfo.innerHTML = '';
+    } else {
+      header.style.display = 'none';
+      inicio.style.display = 'none';
+      contenidoInfo.style.display = 'block';
+    }
+  }
+
+  document.querySelectorAll('.dropdown-content a').forEach(link => {
+    link.addEventListener('click', e => {
+      e.preventDefault();
+      const url = link.getAttribute('href');
+      mostrarInicio(false);
+      const cont = document.getElementById('contenidoInfo');
+      cont.innerHTML = `<iframe src="${url}" style="width:100%; height:1200px; border:none; border-radius:10px;"></iframe>`;
+      window.scrollTo({top:0, behavior:'smooth'});
+    });
+  });
+
+  document.getElementById('inicioBtn').addEventListener('click', e => {
+    e.preventDefault();
+    mostrarInicio(true);
+    window.scrollTo({top:0, behavior:'smooth'});
+  });
+</script>
+
+</body>
+</html>
+

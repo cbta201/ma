@@ -1,0 +1,157 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Club de Ajedrez - CBTA #201</title>
+  <style>
+    @import url('https://fonts.googleapis.com/css2?family=Roboto+Slab:wght@700&display=swap');
+
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    body {
+      font-family: Arial, sans-serif;
+      background: #f0f4f8;
+      color: #1b263b;
+      min-height: 100vh;
+      position: relative;
+      overflow-x: hidden;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      padding: 40px 20px;
+      text-align: center;
+    }
+
+    .decor {
+      position: absolute;
+      border-radius: 50%;
+      opacity: 0.1;
+      z-index: -1;
+      animation: float 12s ease-in-out infinite;
+    }
+
+    .decor1 {
+      width: 140px;
+      height: 140px;
+      background: #415a77;
+      top: 15%;
+      left: 10%;
+    }
+
+    .decor2 {
+      width: 110px;
+      height: 110px;
+      background: #778da9;
+      bottom: 15%;
+      right: 15%;
+      animation-delay: 4s;
+    }
+
+    .decor3 {
+      width: 90px;
+      height: 90px;
+      background: #e0e1dd;
+      top: 55%;
+      left: 55%;
+      animation-delay: 7s;
+    }
+
+    @keyframes float {
+      0%, 100% { transform: translateY(0); }
+      50% { transform: translateY(-25px); }
+    }
+
+    .container {
+      background: white;
+      padding: 40px;
+      border-radius: 20px;
+      max-width: 1000px;
+      box-shadow: 0 0 25px rgba(0,0,0,0.1);
+    }
+
+    h1 {
+      font-family: 'Roboto Slab', serif;
+      font-size: 3rem;
+      margin-bottom: 20px;
+      color: #24305e;
+    }
+
+    h2 {
+      font-size: 2rem;
+      margin: 30px 0 15px;
+      color: #1b263b;
+    }
+
+    p {
+      font-size: 1.2rem;
+      line-height: 1.6;
+      margin-bottom: 20px;
+    }
+
+    ul {
+      list-style-type: disc;
+      padding-left: 40px;
+      text-align: left;
+      margin: 0 auto 30px auto;
+      max-width: 800px;
+    }
+
+    img {
+      max-width: 600px;
+      width: 100%;
+      border-radius: 10px;
+      margin-top: 30px;
+      box-shadow: 0 0 15px #24305e99;
+    }
+
+    @media (max-width: 768px) {
+      .container {
+        padding: 20px;
+      }
+
+      h1 {
+        font-size: 2rem;
+      }
+
+      h2 {
+        font-size: 1.5rem;
+      }
+    }
+  </style>
+</head>
+<body>
+
+  <!-- Decoraciones -->
+  <div class="decor decor1"></div>
+  <div class="decor decor2"></div>
+  <div class="decor decor3"></div>
+
+  <!-- Contenido -->
+  <div class="container">
+    <h1>Club de Ajedrez</h1>
+
+    <p>En el Club de Ajedrez del CBTA #201, promovemos el desarrollo del pensamiento estratégico, la concentración y la paciencia a través de esta milenaria disciplina que fomenta habilidades cognitivas y sociales.</p>
+
+    <h2>Objetivos del Club</h2>
+    <ul>
+      <li>Desarrollar habilidades analíticas y lógicas en los estudiantes.</li>
+      <li>Fomentar la competencia sana y el respeto entre compañeros.</li>
+      <li>Participar en torneos locales y regionales representando al plantel.</li>
+      <li>Incentivar el aprendizaje continuo y la toma de decisiones.</li>
+    </ul>
+
+    <h2>Actividades Principales</h2>
+    <p>Los integrantes reciben asesoría y entrenamiento semanal, realizan partidas y análisis de jugadas, y participan en eventos tanto escolares como externos, fortaleciendo su capacidad mental y social.</p>
+
+    <img src="imagenes/ajedrez.png">
+
+  </div>
+
+</body>
+</html>
+
